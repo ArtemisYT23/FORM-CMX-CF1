@@ -1,0 +1,110 @@
+:root {
+  --ColorWhite: #ddd;
+  --PrimaryColor: #4c607f;
+  --SecondColor: rgb(65, 65, 226);
+  --ColorBlack: #0000;
+  --CentralColor: #F68A20;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-size: cover;
+  background-image: url("../assets/icons/fondoComex.png");
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--ColorWhite);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--PrimaryColor);
+  border-radius: 0.5rem;
+};
+
+body::-webkit-scrollbar-thumb:hover,
+  body::-webkit-scrollbar-thumb:active {
+    background-color: var(--SecondColor);
+  }
+
+  @media screen and (min-width: 720px) {
+    body::-webkit-scrollbar {
+      background-color: var(--PrimaryColor);
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--ColorWhite);
+    }
+  }
+
+  input {
+    border: none;
+    border-bottom: 2px solid var(--PrimaryColor);
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  label {
+    display: block;
+  }
+
+  label {
+    color: var(--PrimaryColor);
+    font-weight: bold;
+  }
+
+  input,
+  button,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+    box-sizing: border-box;
+    outline: none;
+  }
+  textarea {
+    border: 1px solid var(--ColorBlack);
+  }
+
+  input:disabled {
+    background-color: #dddddd;
+  }
+
+
+
+  button {
+    color: #333;
+    background-color: #f4f4f4;
+    outline: none;
+  }
+
+  button:disabled {
+    color: #999;
+  }
+
+  button:not(:disabled):active {
+    background-color: #ddd;
+  }
+
+  button:focus {
+    border-color: #666;
+  };
